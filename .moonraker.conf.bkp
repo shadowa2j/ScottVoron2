@@ -49,7 +49,7 @@ primary_branch = main
 managed_services = mobileraker
 env = /home/voron/mobileraker-env/bin/python
 requirements = scripts/mobileraker-requirements.txt
-install_script = scripts/install-mobileraker-companion.sh
+install_script = scripts/install.sh
 
 [update_manager crowsnest]
 type = git_repo
@@ -68,4 +68,19 @@ path = ~/Klipper-Adaptive-Meshing-Purging
 origin = https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
 managed_services = klipper
 primary_branch = main
+
+[update_manager octoeverywhere]
+type = git_repo
+channel = beta
+path = /home/voron/octoeverywhere
+origin = https://github.com/QuinnDamerell/OctoPrint-OctoEverywhere.git
+env = /home/voron/octoeverywhere-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services = 
+	octoeverywhere
+
+[announcements]
+subscriptions = 
+	octoeverywhere
 
